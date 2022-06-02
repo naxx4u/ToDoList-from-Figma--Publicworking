@@ -169,6 +169,7 @@ h1:hover {
 }
 input[type=checkbox]:checked + label {
     color: black;
+    
     text-decoration: line-through 5px;
     opacity: 35%;
     
@@ -209,7 +210,7 @@ input[type=checkbox]:checked + label {
     margin-left: 24px;
     
 }
-.do-task-label::after{
+.do-task-label::after {
    
     content: '';
     display: block;
@@ -221,16 +222,17 @@ input[type=checkbox]:checked + label {
     position: absolute;
     top: 32%;
     left: 0;
-    z-index: 1;
+    z-index: 2;
     margin-left: 24px;
     opacity: 0;
 
-    background: #94ADCF;
+    background-color: #94ADCF;
     background-size: 13px 13px;
-
-    
-    
 }   
+input[type=checkbox]:checked + .do-task-label::after {
+    opacity: 100;
+}
+
 
 .del-btn{
     height: 30px;
